@@ -35,11 +35,6 @@ while not done:
         ball_dx *= -1
     if (ball_y + ball_size) > SCREEN_HEIGHT or (ball_y - ball_size) < 0:
         ball_dy *= -1
-        
-    max_speed = 100
-    if (ball_dx > max_speed or ball_dx < -1 * max_speed or ball_dy > max_speed or ball_dy < -1 * max_speed):
-        ball_dx *= 0.5
-        ball_dy *= 0.5
 
 
     screen.fill(WHITE)
