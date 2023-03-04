@@ -111,12 +111,12 @@ class Game():
             feed.create()
 
     def draw_info(self, length, speed, screen):
-        # info = "Length: ", str(length) + "    " + "Speed: " + str(round(speed, 2))
-        # font = pygame.font.SysFont('FixedSys', 30, False, False)
-        # text_obj = font.render(info, True, GRAY)
-        # text_rect = text_obj.get_rect()
-        # text_rect.x, text_rect.y = 10,10
-        # screen.blit(text_obj, text_rect)
+        info = "Length: "+ str(length) + "    " + "Speed: " + str(round(speed, 2))
+        font = pygame.font.SysFont('FixedSys', 30, False, False)
+        text_obj = font.render(info, True, GRAY)
+        text_rect = text_obj.get_rect()
+        text_rect.x, text_rect.y = 10,10
+        screen.blit(text_obj, text_rect)
         pass
     def display_frame(self, screen):
         screen.fill(WHITE)
