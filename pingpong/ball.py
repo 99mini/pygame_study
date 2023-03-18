@@ -12,5 +12,14 @@ class Ball():
         self.rect.x += self.dx
         self.rect.y += self.dy
 
+        if self.rect.left < 0:
+            self.dx *= -1
+            self.rect.left = 0
+            self.bounce_sound.play()
+        elif self.rect.right > SCREEN_WIDHT:
+            self.dx *= -1
+            self.rect.right = SCREEN_WIDHT
+            self.bounce_sound.play()
+
     def draw(self, screen):
         pygame.draw.rect(screen, ORANGE, self.rect)

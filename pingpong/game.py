@@ -5,6 +5,7 @@ import pygame
 
 from constants import BLUE
 from ball import Ball
+from enemy import Enemy
 from player import Player
 
 
@@ -21,6 +22,10 @@ class Game():
 
         self.ball = Ball(bounce_sound)
         self.player = Player(ping_sound)
+        self.enemy = Enemy(pong_sound)
+
+        self.player_score = 0
+        self.enemy_score = 0
 
     def process_events(self):
         for event in pygame.event.get():
@@ -37,6 +42,7 @@ class Game():
     def run_logic(self):
         self.ball.update()
         self.player.update(self.ball)
+        self.enemy.update(self.ball)
 
     def display_message(self,screen, message, color):
         pass
@@ -45,6 +51,7 @@ class Game():
         screen.fill(BLUE)
         self.ball.draw(screen)
         self.player.draw(screen)
+        self.enemy.draw(screen)
     
 
 
