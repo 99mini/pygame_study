@@ -5,7 +5,7 @@ from ball import Ball
 
 
 class Enemy():
-    def __init__(self, pong_sound):
+    def __init__(self, pong_sound: pygame.mixer.Sound):
         self.rect = pygame.Rect(int(SCREEN_WIDHT/2),25,50,15)
         self.pong_sound = pong_sound
     
