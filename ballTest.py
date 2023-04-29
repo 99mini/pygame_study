@@ -42,8 +42,6 @@ while not done:
     pygame.draw.circle(screen, BLUE, [ball_x,ball_y], ball_size, 0)
     pygame.display.flip()
 
-
-
     clock.tick(60)
 
 pygame.quit()

@@ -100,7 +100,7 @@ class Pipe():
         return False
 
     # 물고기가 파이프에 충돌한 여부 체크
-    def check_crash(self, fish):
+    def check_crash(self, fish:Fish):
         # 긴 파이프에 충돌한 경우
         if (self.lpipe_rect.x + self.lpipe_width > fish.rect.x) and \
             (self.lpipe_rect.x < fish.rect.x + fish.width) and \
@@ -241,3 +241,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
